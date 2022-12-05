@@ -8,8 +8,8 @@ Members: Ali Jameel, Cint Galvez, Jacob Boruszkowski
 - defs.h
 - main.cc
 - init.cc
-- book.cc
-- store.cc
+- Book.cc
+- Bookstore.cc
 - Makefile
 ```
 
