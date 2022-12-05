@@ -26,8 +26,7 @@ make
 	- REGULAR: ./bookstore
 	- MEMORY LEAK TEST: valgrind --leak-check=yes ./bookstore
 2. Login (enter username and password)
-	3. User-Interfaces
-	
+3. User-Interfaces	
 	User UI:
 	Press 0-3 then Return depending on your desired action:
 	    0. Exit
