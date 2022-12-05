@@ -8,8 +8,10 @@ Members: Ali Jameel, Cint Galvez, Jacob Boruszkowski
 - defs.h
 - main.cc
 - init.cc
-- book.cc
-- store.cc
+- Book.h
+- Book.cc
+- Bookstore.h
+- Bookstore.cc
 - Makefile
 ```
 
@@ -23,14 +25,20 @@ make
 1. launch command:  
 	- REGULAR: ./bookstore
 	- MEMORY LEAK TEST: valgrind --leak-check=yes ./bookstore
-2. Press 0-4 then Return depending on your desired action:
-    0. Exit
-    1. Browse
-    2. Search
-    3. Track Order
-    4. Owner Options: 
-        Press 1-3 then Return depending on your desired action:
-        1. Add Book
-        2. Remove Book
-        3. Print Report
+2. Login (enter username and password)
+	3. User-Interfaces
+	
+	User UI:
+	Press 0-3 then Return depending on your desired action:
+	    0. Exit
+	    1. Browse
+	    2. Search
+	    3. Track Order
+	
+	Owner UI:
+	Press 0-3 then Return depending on your desired action:
+	    0. Exit
+	    1. Add Book
+	    2. Remove Book
+	    3. Print Report
 ```
