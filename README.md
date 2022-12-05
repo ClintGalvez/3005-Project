@@ -10,6 +10,8 @@ Members: Ali Jameel, Cint Galvez, Jacob Boruszkowski
 - init.cc
 - Book.h
 - Book.cc
+- Publisher.h
+- Publisher.cc
 - Bookstore.h
 - Bookstore.cc
 - Makefile
