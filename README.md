@@ -1,4 +1,4 @@
-# COMP 3005-A: Project
+# COMP 3005-A: Bookstore Project
 ```JS
 Members: Ali Jameel, Cint Galvez, Jacob Boruszkowski
 ```
