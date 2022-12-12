@@ -3,7 +3,7 @@
 Members: Ali Jameel, Cint Galvez, Jacob Boruszkowski
 ```
 
-## Source & Header Files
+## Source Files
 ```JS
 - database.ini
 - config.py
