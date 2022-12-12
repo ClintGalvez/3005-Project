@@ -22,3 +22,9 @@ VALUES
 	('Chicken 101', 14321, 101, 10, 'Fiesty Ali Pro.'),
 	('How to Eat Fried Worms!', 24123, 146, 36, 'Jacob Stories & More'),
 	('Twilight: A Story Retold', 12141, 400, 20, 'AJC')
+
+INSERT INTO author("name")
+VALUES
+	('Bill'),
+	('Joe'),
+	('Steve')
