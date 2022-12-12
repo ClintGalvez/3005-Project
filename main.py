@@ -11,11 +11,6 @@ from database import *
 
 
 def login():
-    loggedIn = False
-    username = ""
-    password = ""
-    isOwner = False
-
     print("Login --")
 
     # get login info
@@ -24,29 +19,21 @@ def login():
 
     # verify login info
     print("\nVerifying user...")
-    # query through database...
-
-    # reattempt login
-    loggedIn = True  # TEMP
-    while not loggedIn:
-        print("\n...verification failed\n\nplease try again...")
+    loginVerification = verifyLogin(username, password)
+    while not loginVerification[0]:
+        print("...verification failed\n\nplease try again...")
 
         # get login info
         username = input("Enter username: ")
         password = input("Enter password: ")
 
         # verify login info
-        # query through database...
-        loggedIn = True
+        loginVerification = verifyLogin(username, password)
 
     # verification complete
     print("...verification successful")
 
-    # check if user is an owner
-    if username == "owner":
-        isOwner = True
-
-    return username, isOwner
+    return username, loginVerification[1]
 
 
 def menu(isOwner):
@@ -92,7 +79,11 @@ def addBook():
     print("Add Book --")
 
     name = input("Enter name: ")
+
     isbn = input("Enter ISBN: ")
+    while not (isbn.isnumeric()):
+        isbn = input("\nERROR: invalid input\n\nEnter ISBN: ")
+    isbn = int(isbn)
 
     pageQuantity = input("Enter page quantity: ")
     while not (pageQuantity.isnumeric()):
@@ -100,9 +91,12 @@ def addBook():
     pageQuantity = int(pageQuantity)
 
     price = input("Enter price: ")
-    while not (price.isnumeric()):
-        price = input("\nERROR: invalid input\n\nEnter price: ")
-    price = float(price)
+    while True:
+        try:
+            price = float(price)
+            break
+        except ValueError:
+            price = input("\nERROR: invalid input\n\nEnter price: ")
 
     publisher = input("Enter publisher: ")
 
@@ -162,6 +156,13 @@ def removeBook():
     print("...failed to remove book")
 
 
+def browse():
+    books = browseData()
+    print("\n Books:")
+    for book in books:
+        print("\t- " + book[0])
+
+
 if __name__ == '__main__':
     # application variables
     out = None
@@ -187,7 +188,7 @@ if __name__ == '__main__':
                 print("report begin...\n...finished")
         else:
             if option == 1:  # browse
-                print("books...\n...finished")
+                browse()
             elif option == 2:  # search
                 print("searching...\n...finished")
             elif option == 3:  # view basket
