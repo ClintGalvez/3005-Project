@@ -5,28 +5,15 @@ Members: Ali Jameel, Cint Galvez, Jacob Boruszkowski
 
 ## Source & Header Files
 ```JS
-- defs.h
-- main.cc
-- init.cc
-- Book.h
-- Book.cc
-- Publisher.h
-- Publisher.cc
-- Bookstore.h
-- Bookstore.cc
-- Makefile
-```
-
-## Compilation Command
-```sh
-make
+- database.ini
+- config.py
+- database.py
+- main.py
 ```
 
 ## Launching & Operating Commands
 ```JS
-1. launch command:  
-	- REGULAR: ./bookstore
-	- MEMORY LEAK TEST: valgrind --leak-check=yes ./bookstore
+1. run main.py
 2. Login (enter username and password)
 3. User-Interfaces	
 	User UI:
@@ -41,5 +28,6 @@ make
 	    0. Exit
 	    1. Add Book
 	    2. Remove Book
-	    3. Print Report
+	    3. View Basket
+	    4. Print Report
 ```
